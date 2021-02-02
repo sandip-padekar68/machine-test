@@ -1,0 +1,18 @@
+
+  <div style="margin-top:20px;margin-left: 25%;width:50%">
+    <form [formGroup]="profileForm">
+      <label for="fname">Account Name</label>
+      <input type="text" placeholder="Please enter account name" formControlName="name">
+  
+      <label for="lname">Account Amount</label>
+      <input type="text" placeholder="Please enter account amount" formControlName="balance">
+  
+      <label for="country">Account Type</label>
+      <select id="country" formControlName="type">
+        <option disabled value="">Please select account type</option>
+        <option *ngFor="let t of types" [ngValue]="t">{{ t }}</option>
+        </select>
+      <button class="submit" [disabled]="profileForm.invalid" (click)="createNew()">Create New</button>
+    </form>
+  </div>
+  

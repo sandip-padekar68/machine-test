@@ -1,0 +1,51 @@
+<button class="btn add"><i class="fa fa-plus" [routerLink]="['/add-account',id ]"> Add Account</i></button>
+
+<div *ngIf="accounts && accounts.length>0" style="margin: 10px">
+
+  <h2>Accounts details of budget as follows -</h2>
+  <table >
+    <thead>
+      <tr>
+        <th>Account Id</th>
+        <th>Account Name</th>
+        <th>Account Type</th>
+        <th>Account Cleared Balance </th>
+        <th>Account Balance</th>
+        <th>Account Transfer Payee Id</th>
+        <th>Account Note</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td>
+          {{account?.id}}
+        </td>
+        <td>
+          {{account?.name}}
+        </td>
+        <td>
+          {{account?.type}}
+        </td>
+        <td>
+          {{account?.cleared_balance}}
+        </td>
+        <td>
+          {{account?.balance}}
+        </td>
+        <td>
+          {{account?.transfer_payee_id}}
+        </td>
+       
+        <td>
+          {{account?.note ? account?.note : '-' }}
+        </td>
+       
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+    <p style="color: white">Please Wait. </p>
+  </ngx-spinner>
+  <p style="text-align: center;color:red;font-size: 20px;margin-top: 10%" *ngIf="accounts && accounts.length==0"> No Account listing available to display </p>
