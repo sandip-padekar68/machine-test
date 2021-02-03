@@ -14,6 +14,7 @@ import { AddAccountComponent } from './components/add-account/add-account.compon
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PayeeListComponent } from './components/payee-list/payee-list.component';
+import { ToastrModule } from 'ng6-toastr-notifications';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PayeeListComponent } from './components/payee-list/payee-list.component
     HttpClientModule,
     NgxSpinnerModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

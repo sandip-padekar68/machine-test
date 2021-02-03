@@ -1,52 +1,50 @@
 <div *ngIf="budgets && budgets.length>0" style="margin: 20px">
-
-<h2>Listing details of budget as follows -</h2>
-<table >
-  <thead>
-    <tr>
-      <th>Budget Id</th>
-      <th>Budget Name</th>
-      <th>Budget Start Date </th>
-      <th>Budget End Date</th>
-      <th>Budget Amount</th>
-      <th>Budget Currency</th>
-      <th>Action</th>
-      <th>Action</th>
-
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let budget of budgets">
-      <td>
-        {{budget?.id}}
-      </td>
-      <td>
-        {{budget?.name}}
-      </td>
-      <td>
-        {{budget?.first_month}}
-      </td>
-      <td>
-        {{budget.last_month}}
-      </td>
-      <td>
-        {{budget?.currency_format?.example_format}}
-      </td>
-      <td>
-        {{budget?.currency_format?.iso_code}}
-      </td>
-      <td>
-       <button  class="btn" [routerLink]="['/account-listing', budget.id]">View Account Detils</button> 
-      </td>
-      <td>
-          <button class="btn" [routerLink]="['/payee-list', budget.id]">View Payers List</button> 
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <h2>Listing details of budget as follows -</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Budget Id</th>
+        <th>Budget Name</th>
+        <th>Budget Start Date </th>
+        <th>Budget End Date</th>
+        <th>Budget Amount</th>
+        <th>Budget Currency</th>
+        <th>Action</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let budget of budgets">
+        <td>
+          {{budget?.id}}
+        </td>
+        <td>
+          {{budget?.name}}
+        </td>
+        <td>
+          {{budget?.first_month}}
+        </td>
+        <td>
+          {{budget?.last_month}}
+        </td>
+        <td>
+          {{budget?.currency_format?.example_format}}
+        </td>
+        <td>
+          {{budget?.currency_format?.iso_code}}
+        </td>
+        <td>
+          <button class="btn" [routerLink]="['/account-listing', budget.id]">View Account Detils</button>
+        </td>
+        <td>
+          <button class="btn" [routerLink]="['/payee-list', budget.id]">View Payers List</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
   <p style="color: white">Please Wait. </p>
 </ngx-spinner>
-<p style="text-align: center;color:red;font-size: 20px;margin-top: 10%" *ngIf="budgets && budgets.length==0"> No Budgets listing available to display</p>
+<p style="text-align: center;color:red;font-size: 20px;margin-top: 10%" *ngIf="budgets && budgets.length==0"> No Budgets
+  listing available to display</p>

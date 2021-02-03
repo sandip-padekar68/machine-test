@@ -1,36 +1,32 @@
 <div *ngIf="payees && payees.length>0" style="margin: 20px">
 
-    <h2>Listing details of payees as follows -</h2>
-    <table >
-      <thead>
-        <tr>
-          <th>Payee Id</th>
-          <th>Payee Name</th>
-          <th>Payee Transfer Account Id </th>
-          
-          
-          
-    
-    
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let payee of payees">
-          <td>
-            {{payee?.id}}
-          </td>
-          <td>
-            {{payee?.name}}
-          </td>
-          <td>
-            {{payee?.transfer_account_id}}
-          </td>
-          
-        </tr>
-      </tbody>
-    </table>
-    </div>
-    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
-      <p style="color: white">Please Wait. </p>
-    </ngx-spinner>
-    <p style="text-align: center;color:red;font-size: 20px;margin-top: 10%" *ngIf="payees && payees.length==0">No Payees listing available to display</p>
+  <h2>Listing details of payees as follows -</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Payee Id</th>
+        <th>Payee Name</th>
+        <th>Payee Transfer Account Id </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payee of payees">
+        <td>
+          {{payee?.id}}
+        </td>
+        <td>
+          {{payee?.name}}
+        </td>
+        <td>
+          {{payee?.transfer_account_id}}
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+  <p style="color: white">Please Wait. </p>
+</ngx-spinner>
+<p style="text-align: center;color:red;font-size: 20px;margin-top: 10%" *ngIf="payees && payees.length==0">No Payees
+  listing available to display</p>
