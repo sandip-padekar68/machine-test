@@ -22,3 +22,9 @@ likewise if anything misssed then install that dependancy
 if required add that plugin to browser and enable it before running
 
 
+Steps for running unit test cases :
+ 1) cd machine-test
+ 2) npm install
+ 3) ng test
+
+
