@@ -28,3 +28,7 @@ Steps for running unit test cases :
  3) ng test
 
 
+Steps for running e2e test cases :
+cd machine-test
+npm install
+ng e2e
