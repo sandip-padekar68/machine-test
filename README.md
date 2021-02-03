@@ -29,6 +29,6 @@ Steps for running unit test cases :
 
 
 Steps for running e2e test cases :
-cd machine-test
-npm install
-ng e2e
+1)cd machine-test
+2)npm install
+3)ng e2e
